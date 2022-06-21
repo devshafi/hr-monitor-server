@@ -1,4 +1,4 @@
-## Prerequisites of Running the Application
+## Prerequisites for Running the Application
 - Make sure MySQL and Apache server is installed and running.
   
 - Database and email server credentials are shared in **.env** file only for testing purpose. 

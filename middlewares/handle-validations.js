@@ -1,4 +1,4 @@
-import { BadRequest } from "../utils/errors.js";
+import { BadRequest } from "../utils/errors";
 
 const handleValidation = (validate, property) => {
     return (req, res, next) => {

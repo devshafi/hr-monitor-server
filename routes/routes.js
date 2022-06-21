@@ -1,9 +1,9 @@
 import express from "express";
 const router = express.Router();
-import handleValidation from "../middlewares/handle-validations.js";
-import validators from "../models/view-models/index.js";
+import handleValidation from "../middlewares/handle-validations";
+import validators from "../models/view-models/index";
 
-import { postHandler, csvHandler, getAllHandler, emailHandler } from "../controller/employee_controller.js";
+import { postHandler, csvHandler, getAllHandler, emailHandler } from "../controller/employee_controller";
 
 router.post(
     "/add-employee",

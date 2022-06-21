@@ -2,9 +2,9 @@ import express from "express";
 import cors from "cors";
 import fileUpload from "express-fileupload";
 import { } from "dotenv/config"
-import { connectDB } from "./config/setup_db.js";
-import Router from "./routes/routes.js"
-import { handleErrors } from "./middlewares/handle_errors.js";
+import { connectDB } from "./config/setup_db";
+import Router from "./routes/routes"
+import { handleErrors } from "./middlewares/handle_errors";
 
 const app = express()
 

@@ -1,5 +1,5 @@
-import Employee from "../models/Employee.js";
-import transporter from "../utils/email/transporter.js";
+import Employee from "../models/Employee";
+import transporter from "../utils/email/transporter";
 
 export const saveEmployee = async (employee) => {
     const createdEmployee = await Employee.create(employee);

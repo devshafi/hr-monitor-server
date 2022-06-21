@@ -1,6 +1,6 @@
 import fs from "fs";
 import fastCsv from "fast-csv";
-import { BadRequest, FailedToParse } from "./errors.js";
+import { BadRequest, FailedToParse } from "./errors";
 
 const convertCSVToArray = (file) => {
     return new Promise((resolve, reject) => {

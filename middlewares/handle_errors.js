@@ -1,4 +1,4 @@
-import { GeneralError } from "./../utils/errors.js";
+import { GeneralError } from "./../utils/errors";
 
 export const handleErrors = async (err, req, res, next) => {
     if (err instanceof GeneralError) {

@@ -1,5 +1,5 @@
 import { DataTypes } from "sequelize";
-import db from "../config/db.js";
+import db from "../config/db";
 
 const Employee = db.define("Employees", {
     firstName: {
@@ -28,6 +28,15 @@ const Employee = db.define("Employees", {
         allowNull: false,
         unique: true
     }
-}, { freezeTableName: true })
+},
+    {
+        indexes: [
+            {
+                unique: true,
+                fields: ["firstName", "lastName", "email"]
+            }
+        ]
+    },
+    { freezeTableName: true })
 
 export default Employee;

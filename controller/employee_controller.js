@@ -1,7 +1,6 @@
-import convertCSVToArray from "../utils/read_csv.js";
-import { saveEmployee, saveEmployees, getAllEmployees, sendEmail } from "../services/employee_services.js";
-import { fileTypeFromFile } from "file-type";
-import { BadRequest } from "../utils/errors.js";
+import convertCSVToArray from "../utils/read_csv";
+import { saveEmployee, saveEmployees, getAllEmployees, sendEmail } from "../services/employee_services";
+import { BadRequest } from "../utils/errors";
 
 export const postHandler = async (req, res, next) => {
 
@@ -68,10 +67,3 @@ export const emailHandler = async (req, res, next) => {
     }
 
 }
-
-
-
-
-
-
-

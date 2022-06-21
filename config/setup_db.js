@@ -11,7 +11,6 @@ async function createDBIfNotExists() {
     await connection.query(`CREATE DATABASE IF NOT EXISTS ${process.env.DB_NAME}`);
 }
 
-
 export const connectDB = async () => {
     db.sync();
     await createDBIfNotExists();

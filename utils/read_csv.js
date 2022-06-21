@@ -1,14 +1,12 @@
 import fs from "fs";
-import fastCsv from "fast-csv";
+import { parse } from "fast-csv";
 import { BadRequest, FailedToParse } from "./errors";
 
 const convertCSVToArray = (file) => {
     return new Promise((resolve, reject) => {
         const options = {
             ignoreEmpty: true,
-            headers: true,
-            // renameHeaders: false,
-            // discardUnmappedColumns: false
+            headers: true
         };
         const validEntries = [];
         let validRows = 0;
@@ -17,7 +15,7 @@ const convertCSVToArray = (file) => {
 
         let emailPattern = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i;
         const readCSVStream = fs.createReadStream(file)
-            .pipe(fastCsv.parse(options))
+            .pipe(parse(options))
             .on("headers", (headers) => {
                 const mustHaveHeaders = ["First name", "Last name", "Email address"];
                 const headersContainsMustHave = mustHaveHeaders.every(header => headers.includes(header))

@@ -12,7 +12,6 @@ const convertCSVToArray = (file) => {
         let validRows = 0;
         let invalidRows = 0;
         const mustHaveHeaders = ["First name", "Last name", "Email address"];
-
         let emailPattern = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i;
         const readCSVStream = fs.createReadStream(file)
             .pipe(parse(options))

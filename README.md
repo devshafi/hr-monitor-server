@@ -14,5 +14,5 @@ In the project directory, run:
 
 ### `npm start` to start the project.
 
-Runs the app in the development mode using nodemon. 
+Runs the app in the development mode using nodemon and babel. 
 

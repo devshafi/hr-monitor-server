@@ -16,3 +16,5 @@ In the project directory, run:
 
 Runs the app in the development mode using nodemon and babel. 
 
+The project is developed in node version **16.15.0**
+
